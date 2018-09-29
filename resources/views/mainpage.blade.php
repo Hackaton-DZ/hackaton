@@ -12,7 +12,11 @@
     </head>
 <body>
 
+<<<<<<< HEAD
     <h1>qwWEEew</h1>
+=======
+    <h1>qwew</h1>
+>>>>>>> front-end
 
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.js"></script>
