@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/ncomprobante/{comprobante}', 'RecursosController@getVentas')->name('getventa');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('devoluciones','DevolucionController');
 Route::resource('productos','ProductoController');

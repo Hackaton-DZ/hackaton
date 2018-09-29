@@ -15,16 +15,9 @@ class ProductoController extends Controller
     public function index()
     {
         
-        $ventas= json_decode(file_get_contents("https://inretail-hackathon-api.azurewebsites.net/api/promart/Ventas"));
-        //$Plan= new Venta();
-        foreach($ventas as $venta){
-            $Plan= new Producto();
-            $Plan->fill( (array)$venta );
-            $Plan->save();
-        }
         
-        //return view('devoluciones.create', compact('clientes','name'));
-        return $prod;
+        return view('productos.index');
+        
     }
 
     /**
