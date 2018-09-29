@@ -24,3 +24,5 @@ Route::post('/ncomprobante/{comprobante}', 'RecursosController@saveVentas')->nam
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('devoluciones','DevolucionController');
 Route::resource('productos','ProductoController');
+Route::resource('tickets','TicketController');
+Route::resource('notas-credito','NotasCreditoController');
