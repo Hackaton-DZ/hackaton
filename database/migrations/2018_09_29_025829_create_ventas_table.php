@@ -15,15 +15,19 @@ class CreateVentasTable extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idTrx');
-            $table->datetime('fecha');
-            $table->integer('caja');
-            $table->integer('secuencia');
-            $table->integer('tienda');
-            $table->integer('ean');
-            $table->integer('sku');
-            $table->integer('cantidad');
-            $table->decimal('precio',6);
+            $table->integer('trnTechKey');
+            $table->datetime('dcompra');
+            $table->integer('nterminal');
+            $table->integer('nsecuencia');
+            $table->integer('orgLvlNumber');
+            $table->string('prdUpc');
+            $table->string('prdLvlNumber');
+            $table->string('prdFullName');
+            $table->integer('qcantidad');
+            $table->decimal('mventa',6);
+            $table->string('documento');
+            $table->string('apellidos')->nullable();
+            $table->string('nombreCliente')->nullable();
             $table->timestamps();
         });
     }
