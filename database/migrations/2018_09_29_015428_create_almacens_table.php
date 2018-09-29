@@ -26,6 +26,6 @@ class CreateAlmacensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('almacens');
+        Schema::dropIfExists('almacenes');
     }
 }
