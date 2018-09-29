@@ -5,6 +5,8 @@ use App\Cliente;
 use App\Producto;
 use App\Venta;
 use App\PedidoDevolucion;
+use App\Ticket;
+use App\Devolucion;
 use Illuminate\Http\Request;
 
 class DevolucionController extends Controller
@@ -46,10 +48,13 @@ class DevolucionController extends Controller
 
     public function  store(Request $request){
 
-        $scort = PedidoDevolucion::create($request->all());
-        $scort->save();
+        //4$peddev = PedidoDevolucion::create($request->all());
+        //$peddev->save();
 
-
+        $ticket= Ticket::create($request->all());
+        $ticket->save();
+        //$devolucion= Devolucion::create($request->all());
+        //$devolucion->save();
 
         return redirect()->route('devoluciones.index');
     }
