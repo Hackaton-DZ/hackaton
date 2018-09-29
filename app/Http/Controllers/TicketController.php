@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Ticket;
+use App\Venta;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -13,7 +14,10 @@ class TicketController extends Controller
      */
     public function index()
     {
-        return view('tickets.index');
+        $tickets = Ticket::All();
+        $venta= Venta::All();
+        //return $tickets;
+        return view('tickets.index',compact('tickets'));
     }
 
     /**

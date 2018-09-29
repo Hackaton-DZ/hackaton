@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Ticket;
 use Illuminate\Database\Eloquent\Model;
 
 class Venta extends Model
@@ -11,4 +11,9 @@ class Venta extends Model
                            'orgLvlNumber','prdUpc','prdLvlNumber','prdFullName',
                            'qcantidad','mventa','documento','apellidos',
                            'nombreCliente'] ;
+                        
+    public function  ticket(){
+            return $this->hasOne(Ticket::class);
+  
+    }
 }

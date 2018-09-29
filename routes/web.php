@@ -14,12 +14,14 @@
 Route::get('/', function () {
     return view('devoluciones.test');
 });
+Route::get('/postventa', function () {
+    return view('devoluciones.postventa');
+});
 
 Auth::routes();
 
 Route::get('/ncomprobante/{comprobante}', 'RecursosController@getVentas')->name('getventa');
-Route::post('/ncomprobante/{comprobante}', 'RecursosController@saveVentas')->name('getventa');
-
+Route::post('/ncomprobante/{comprobante}', 'RecursosController@saveVentas')->name('saveventa');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('devoluciones','DevolucionController');
