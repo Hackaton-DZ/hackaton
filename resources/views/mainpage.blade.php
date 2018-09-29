@@ -11,9 +11,6 @@
         <link href="/css/styles.css" rel="stylesheet" media="screen">           
     </head>
 <body>
-
-    <h1>qwewwe</h1>
-
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/script.js"></script>
