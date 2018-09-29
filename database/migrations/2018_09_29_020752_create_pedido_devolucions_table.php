@@ -37,6 +37,6 @@ class CreatePedidoDevolucionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedido_devolucions');
+        Schema::dropIfExists('pedido_devoluciones');
     }
 }
