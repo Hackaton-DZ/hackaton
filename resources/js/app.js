@@ -18,5 +18,19 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    created: function() {
+        this.getVentas();
+    },
+    data: {
+        ventas: []
+    },
+    methods: {
+        getScorts: function() {
+            var urls = 'comprobante/62518450';
+            axios.get(urls).then(response => {
+                this.ventas= response.data;
+            })
+        }
+    }
 });

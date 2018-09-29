@@ -8,6 +8,8 @@ class RecursosController extends Controller
 {
     public function getVentas($comprobante){
         $ventas= Venta::All()->where('trnTechKey',$comprobante)->first();
-        return $ventas;
-    }
+        echo json_encode($ventas);
+       
+       }
+
 }

@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('devoluciones.test');
 });
 
 Auth::routes();
+
 Route::get('/ncomprobante/{comprobante}', 'RecursosController@getVentas')->name('getventa');
+Route::post('/ncomprobante/{comprobante}', 'RecursosController@saveVentas')->name('getventa');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('devoluciones','DevolucionController');
 Route::resource('productos','ProductoController');
