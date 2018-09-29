@@ -12,7 +12,7 @@
     </head>
 <body>
 
-    <h1>qweqew</h1>
+    <h1>qwew</h1>
 
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.js"></script>
